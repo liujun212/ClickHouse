@@ -252,6 +252,7 @@ INSTANTIATE_TEST_SUITE_P(Primes,
 TEST(BitHelpers, maskLowBits)
 {
     EXPECT_EQ(0b00000111, ::maskLowBits<uint8_t>(3));
+    EXPECT_EQ(0b10000000, ::maskLowBits<uint8_t>(8));
     EXPECT_EQ(0b01111111, ::maskLowBits<uint8_t>(7));
     EXPECT_EQ(0b0000000001111111, ::maskLowBits<UInt16>(7));
     EXPECT_EQ(0b0001111111111111, ::maskLowBits<UInt16>(13));
